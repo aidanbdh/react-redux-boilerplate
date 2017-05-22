@@ -1,0 +1,46 @@
+{
+  "name": "react-redux-boilerplate",
+  "version": "1.0.0",
+  "description": "Boilerplate for a basic React/Redux website with Node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./server/server.js",
+    "watch": "nodemon ./server/server.js",
+    "bundle": "browserify -t babelify public/index.js -o public/main.js",
+    "bundle:watch": "watchify -v -t babelify public/index.js -o public/main.js",
+    "test": "mocha",
+    "test:watch": "mocha -w -R min",
+    "coverage": "nyc --reporter=lcov npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aidanbdh/react-redux-boilerplate.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aidanbdh/react-redux-boilerplate/issues"
+  },
+  "homepage": "https://github.com/aidanbdh/react-redux-boilerplate#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.5",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babelify": "^7.3.0",
+    "browserify": "^14.3.0",
+    "chai": "^3.5.0",
+    "jsdom": "^10.1.0",
+    "mocha": "^3.4.1",
+    "nodemon": "^1.11.0",
+    "nyc": "^10.3.2",
+    "watchify": "^3.9.0"
+  }
+}
